@@ -1,6 +1,6 @@
 %define name iwlwifi-6005-ucode
 %define tarname iwlwifi-6000g2a-ucode
-%define version 17.168.5.2
+%define version 17.168.5.3
 %define release %mkrel 1
 
 Summary: Intel PRO/Wireless 6005AGN microcode
