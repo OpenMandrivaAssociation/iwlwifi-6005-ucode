@@ -1,6 +1,6 @@
 %define name iwlwifi-6005-ucode
 %define tarname iwlwifi-6000g2a-ucode
-%define version 17.168.5.3
+%define version 18.168.6.1
 %define release %mkrel 1
 
 Summary: Intel PRO/Wireless 6005AGN microcode
@@ -11,7 +11,6 @@ Source0: http://www.intellinuxwireless.org/iwlwifi/downloads/%{tarname}-%{versio
 License: Proprietary
 Group:	 System/Kernel and hardware
 Url:	 http://intellinuxwireless.org/
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
 
 %description
@@ -26,16 +25,9 @@ your system.
 %build
 
 %install
-rm -rf %{buildroot}
 install -d %{buildroot}/lib/firmware
 install -m644 *.ucode %{buildroot}/lib/firmware/
 
-%clean
-rm -rf %{buildroot}
-
 %files
-%defattr(-,root,root)
 %doc LICENSE.* README.*
 /lib/firmware/*.ucode
-
-
